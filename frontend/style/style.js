@@ -1,0 +1,1 @@
+// import 'boxicons' is not used since idk how to get it work and btw there's some whole lot of unused packages if youu dont mind thx

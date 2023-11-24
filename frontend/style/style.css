@@ -1,0 +1,147 @@
+:root {
+    --primary-1:  hsl(27, 88%, 80%);
+    --primary-2: hsl(27, 88%, 90%);
+    --text-1: hsl(27, 88%, 35%);
+    --text-2: hsl(27, 88%, 25%);
+    --text-black: hsl(5, 33%, 7%);
+    --bg: hsl(27, 88%, 95%);
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('GoogleSans-Regular.woff2') format('woff2'),
+        url('GoogleSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Google Sans';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+}
+.main {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 16rem;
+    background-color: var(--primary-1);
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    border-radius: 0 4ch 4ch 0;    
+}
+
+.sidebar a {
+    display: block;
+    color: var(--text-1);
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: hsl(27, 88%, 60%);
+    color: hsl(27, 88%, 25%);
+    padding: 1ch;
+    border-radius: 4ch;
+}
+  
+  /* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: hsla(27, 88%, 60%);
+    transition: 0.3s;
+    color: white;
+}
+
+.container .fancy-lil-header {
+    background-color: var(--primary-1);
+    color: var(--text-1);
+    height: 4ch;
+    width: auto;
+    border-radius: 4ch;
+    padding: 1ch;
+    margin: 1ch;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 41px;   
+    position: relative;
+    
+}
+
+.desc, p {
+    margin: 1ch;
+}
+.y-container {
+    background-color: var(--primary-2);
+    height: 260px;
+    width: auto;
+    margin: 1ch;
+    border-radius: 4ch;
+    position: absolute;
+    overflow: auto;
+}
+
+.string-container {
+    padding: 1ch;
+}
+
+button {
+    border-radius: 100%;
+    border: none;
+    background-color: hsla(27, 88%, 80%, 0.6);
+    backdrop-filter: blur(2px);
+    width: 6ch;
+    height: 6ch;
+}
+
+.buttons {
+    margin: 1ch;
+    padding: 1ch;
+    position:sticky;
+    bottom:0;
+    left:0;
+    margin-left:0; 
+}
+
+div.container {
+    margin-left: 250px;
+    padding: 1px 16px;
+    height: 1000px;
+    color: var(--text-black);
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border-radius: 0 0 0 0;
+    }
+    .sidebar a {float: left;}
+    div.container {margin-left: 0;}
+
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+      border-radius: 0 0 0 0;
+    }
+  }
+
+code {
+    background-color: rgba(201, 201, 201, 0.582);
+    border-radius: 5px;
+    font-family: Consolas;
+    padding: 2px;
+}
