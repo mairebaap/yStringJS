@@ -1,5 +1,3 @@
-// alert them of the beta
-alert("this is the beta version and is still under development. some futures might not appear.")
 
 const possibleStrings = [':girl_tone1:', 'yasmin', ':heart:', 'i love', 'more', 'so much', 'is so hot', 'is tight']
 
@@ -13,6 +11,16 @@ function pick(array) {
     const strIndex = Math.floor(Math.random() * arLen);
     return array[strIndex];
 }
+
+function handleButtonClick() {
+    let stringContainer = document.getElementById('stringContainer');
+    if (stringContainer) {
+        let yString = createYString(128);
+        stringContainer.innerHTML = yString;
+    } else {
+        console.error("Element with ID 'stringContainer' not found.");
+    }
+} 
 
 let yString = createYString(128);
 

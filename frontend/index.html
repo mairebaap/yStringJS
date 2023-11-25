@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yString.js | </title>
+    <title>yString.js | beta </title>
     <!-- Styles -->
     <link rel="stylesheet" href="./style/style.css">
     <script src="./style/style.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   
+    <style>
+        .home {
+            background-color: hsla(27, 88%, 60%);
+            color: white;
+            border-end-end-radius: 100px;
+            border-start-end-radius: 100px;
+            width: 80%;
+            transition: none;
+        }
+    </style>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
 </head>
@@ -16,21 +25,21 @@
     <div class="main">
         <div class="sidebar">
             <div class="wrapper">
-            <a href="index.html"> <i class='bx bxs-home'></i>  <span> <b> Home </b> </span></a>
-            <a href="history.html"> <i class='bx bx-history' ></i>  <span> <b> History </b></span></a>
-            <a href="settings.html"> <i class='bx bx-cog' ></i>  <span> <b> Settings</b></span></a>
+            <a href="index.html" class="home"> <i class='bx bxs-home'></i>  <span> <b> Home </b> </span></a>
+            <a href="history.html" class="history"> <i class='bx bx-history' ></i>  <span> <b> History </b></span></a>
+            <a href="settings.html" class="settings"> <i class='bx bx-cog' ></i>  <span> <b> Settings</b></span></a>
             </div>
         </div>
 
         <div class="container">
-            <div class="fancy-lil-header"> <h3 class="head"> yString.js | v 0.5 beta</h3></div>
+            <div class="fancy-lil-header"> <h3 class="head"> yString.js | v 0.5.1 beta</h3></div>
             <p class="desc"> idk what to say it just figures out how much someone will get pissed off from the <code>Math.random()</code> doing it's job and like idk it's all in the readme file ok</p> <br>
             <p> as this is still under development, you will only see a pre defined array in work and the only thing you can do is just click on the <i class="bx bx-dice-5"></i> icon and let it do it's work</p> <br>
             <p style="text-align: center;"> maximum yString lengh is 128 as of november 24, 2023.</p>
             <div class="y-container">
                 <div class="string-container"> <p id="stringContainer"> if you're seeing this, then there's something wrong with the code.</p></div>
                 <div class="buttons">
-                    <button class="button-roll" onclick="createYString(128)"> <i class="bx bxs-dice-5" style="font-size: 3ch;"></i></button>
+                    <button class="button-roll" onclick="handleButtonClick()"> <i class="bx bxs-dice-5" style="font-size: 3ch;"></i></button>
                 </div>
             </div>
         </div>
@@ -40,6 +49,6 @@
 
      <!-- Program logic -->
      <script src="../src/array.js"></script>
-
+     <script src="../src/occurences.js"></script>
 </body>
 </html>

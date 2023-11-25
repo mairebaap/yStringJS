@@ -19,7 +19,7 @@
 * {
     font-family: 'Google Sans';
     margin: 0;
-    padding: 0;
+    padding: 0;     
 }
 
 body {
@@ -32,20 +32,36 @@ body {
 
 .sidebar {
     margin: 0;
-    padding: 0;
-    width: 16rem;
+    padding: 0; 
     background-color: var(--primary-1);
     height: 100%;
-    position: fixed;
-    overflow: auto;
-    border-radius: 0 4ch 4ch 0;    
+    width: 10ch;
+    position: fixed;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1ch;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
 }
 
 .sidebar a {
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: var(--text-1);
-    padding: 16px;
+    padding: 6px;
     text-decoration: none;
+    width: 80%;
+    border-radius: 100px;
+    margin: 1ch;
 }
 
 .sidebar a.active {
@@ -60,6 +76,8 @@ body {
     background-color: hsla(27, 88%, 60%);
     transition: 0.3s;
     color: white;
+    border-radius: 100px;
+    width: 80%;
 }
 
 .container .fancy-lil-header {
@@ -113,7 +131,7 @@ button {
 }
 
 div.container {
-    margin-left: 250px;
+    margin-left: 110px;
     padding: 1px 16px;
     height: 1000px;
     color: var(--text-black);
@@ -123,10 +141,9 @@ div.container {
     .sidebar {
       width: 100%;
       height: auto;
-      position: relative;
-      border-radius: 0 0 0 0;
+      position: fixed;
+      top: 0;
     }
-    .sidebar a {float: left;}
     div.container {margin-left: 0;}
 
   }
@@ -134,8 +151,6 @@ div.container {
   @media screen and (max-width: 400px) {
     .sidebar a {
       text-align: center;
-      float: none;
-      border-radius: 0 0 0 0;
     }
   }
 
@@ -144,4 +159,26 @@ code {
     border-radius: 5px;
     font-family: Consolas;
     padding: 2px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-1);
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(27, 88%, 70%);
+  border-radius: 10px;
 }
