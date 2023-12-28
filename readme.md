@@ -1,1 +1,1 @@
-shit is deprecaded lol
+shit is deprecated lol
